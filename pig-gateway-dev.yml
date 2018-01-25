@@ -3,14 +3,17 @@ server:
 
 spring:
   rabbitmq:
-    host: 127.0.0.1
+    host: 106.14.69.75
     port: 5682
     username: pig
     password: ENC(gc16brBHPNq27HsjaULgKGq00Rz6ZUji)
   zipkin:
     rabbitmq:
       queue: zipkin
-    
+  sleuth:
+    sampler:
+      percentage: 1.0
+      
 hystrix:
   command:
     default:

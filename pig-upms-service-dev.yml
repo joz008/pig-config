@@ -10,19 +10,19 @@ spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
-    password: 123456
-    url: jdbc:mysql://127.0.0.1:3309/pig?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    password: ENC(gc16brBHPNq27HsjaULgKGq00Rz6ZUji)
+    url: jdbc:mysql://106.14.69.75:3309/pig?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
   rabbitmq:
-    host: 127.0.0.1
+    host: 106.14.69.75
     port: 5682
     username: pig
     password: lengleng
-  # zipkin:
-  #     base-url: http://localhost:5002
-  # sleuth:
-  #   enabled: true
-  #   sampler:
-  #     percentage: 1
+  zipkin:
+    rabbitmq:
+      queue: zipkin
+  sleuth:
+    sampler:
+      percentage: 1.0
       
 #mybaits-plus配置，修改主键类型，mapper.xml、type 别名等
 mybatis-plus:
